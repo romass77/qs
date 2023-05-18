@@ -8,6 +8,7 @@
     </head>
     <body>
         <h1>REPORT</h1>
-        <a href="<%=application.getContextPath()%>/part">Parts list</a>
+        <a href="<%=application.getContextPath()%>/part/parts_list">Parts list</a><br>
+        <a href="<%=application.getContextPath()%>/report/reports_list">Reports list</a>
     </body>
 </html>
