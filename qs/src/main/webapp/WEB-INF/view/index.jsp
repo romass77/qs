@@ -9,6 +9,7 @@
     <body>
         <h1>REPORT</h1>
         <a href="<%=application.getContextPath()%>/part/parts_list">Parts list</a><br>
-        <a href="<%=application.getContextPath()%>/report/reports_list">Reports list</a>
+        <a href="<%=application.getContextPath()%>/report/reports_list">Reports list</a><br>
+        <a href="<%=application.getContextPath()%>/form/form">Form</a>
     </body>
 </html>

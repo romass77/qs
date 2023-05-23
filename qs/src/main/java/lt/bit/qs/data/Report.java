@@ -1,6 +1,7 @@
 package lt.bit.qs.data;
 
 import java.util.Date;
+import java.util.List;
 import java.util.Objects;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -8,6 +9,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -20,9 +22,11 @@ public class Report {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idreport;
     private Integer reportnumber;
+
     @ManyToOne
     @JoinColumn(name = "part")
     private Part part;
+     
     private String ponumber;
     @Temporal(TemporalType.DATE)
     private Date date;
@@ -114,8 +118,8 @@ public class Report {
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 79 * hash + Objects.hashCode(this.idreport);
+        int hash = 7;
+        hash = 89 * hash + Objects.hashCode(this.idreport);
         return hash;
     }
 
@@ -139,5 +143,7 @@ public class Report {
         return "Report{" + "idreport=" + idreport + ", reportnumber=" + reportnumber + ", part=" + part + ", ponumber=" + ponumber + ", date=" + date + ", quantaty=" + quantaty + ", user=" + user + ", supplier=" + supplier + '}';
     }
 
-   
+
+
+  
 }
