@@ -39,6 +39,7 @@ import javax.xml.bind.annotation.XmlRootElement;
     @NamedQuery(name = "Task.findByEnddate", query = "SELECT t FROM Task t WHERE t.enddate = :enddate")})
 public class Task implements Serializable {
 
+    
     private static final long serialVersionUID = 1L;
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -66,6 +67,7 @@ public class Task implements Serializable {
     public Task() {
     }
 
+    
     public Task(Integer idtasks) {
         this.idtasks = idtasks;
     }
