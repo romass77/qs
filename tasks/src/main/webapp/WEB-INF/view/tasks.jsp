@@ -10,7 +10,7 @@
         
           <a href="<%=application.getContextPath()%>/task/edit">New task</a>
         <ul>
-            <c:forEach var="task" items="${list}">
+            <c:forEach var="task" items="${uzduotis}">
                 <li>
                     ${task.idtasks}&nbsp;
 

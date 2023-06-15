@@ -2,6 +2,7 @@
 package lt.bit.tasks.controllers;
 
 import lt.bit.tasks.dao.TaskDAO;
+import lt.bit.tasks.dao.UserDAO;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,12 +16,14 @@ public class TaskController {
     
     @Autowired
     private TaskDAO taskDAO;
+       @Autowired
+    private UserDAO userDAO;
     
     
     @GetMapping("task_list")
     public ModelAndView sarasas() {
         ModelAndView mav = new ModelAndView("tasks");
-        mav.addObject("list", taskDAO.findAll());
+        mav.addObject("uzduotis", taskDAO.findAll());
         return mav;
     }
     

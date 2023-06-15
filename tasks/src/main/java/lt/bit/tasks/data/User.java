@@ -62,6 +62,8 @@ public class User implements Serializable {
     @Size(min = 1, max = 255)
     @Column(name = "password")
     private String password;
+    
+ 
 
     public User() {
     }
@@ -75,6 +77,7 @@ public class User implements Serializable {
         this.name = name;
         this.email = email;
         this.password = password;
+       
     }
 
     public Integer getIduser() {
@@ -108,7 +111,7 @@ public class User implements Serializable {
     public void setPassword(String password) {
         this.password = password;
     }
-
+   
     @Override
     public int hashCode() {
         int hash = 0;
@@ -136,8 +139,10 @@ public class User implements Serializable {
 
 //    @Override
 //    public String toString() {
-//        return "User{" + "taskCollection=" + taskCollection + ", iduser=" + iduser + ", name=" + name + ", email=" + email + ", password=" + password + '}';
+//        return "User{" + "taskCollection=" + taskCollection + ", iduser=" + iduser + ", name=" + name + ", email=" + email + ", password=" + password + ", cpassword=" + cpassword + '}';
 //    }
+
+
     
 
     @XmlTransient

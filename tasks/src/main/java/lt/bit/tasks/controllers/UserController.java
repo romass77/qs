@@ -77,7 +77,8 @@ public class UserController {
         }
         return sarasas();
     }
-    
+
+  
 // password encrypting metod
     private String encryptPassword(String password) {
         // Use MD5 or a stronger encryption algorithm to encrypt the password
@@ -88,6 +89,12 @@ public class UserController {
         } catch (NoSuchAlgorithmException e) {
             throw new RuntimeException("Error encrypting password", e);
         }
+    }
+  @GetMapping("delete")
+    @Transactional
+    public ModelAndView delete(@RequestParam("iduser") Integer id) {
+        userDAO.deleteById(id);
+        return sarasas();
     }
 
 }
