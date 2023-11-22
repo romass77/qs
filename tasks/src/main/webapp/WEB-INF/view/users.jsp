@@ -21,7 +21,7 @@
                     ${user.password}
                     <a href="<%=application.getContextPath()%>/user/delete?iduser=${user.iduser}">Delete</a>
                     <a href="<%=application.getContextPath()%>/user/edit?iduser=${user.iduser}">Edit</a>
-                    <a href="<%=application.getContextPath()%>/task/task_list?iduser=${user.iduser}">Tasks</a>
+                    <a href="<%=application.getContextPath()%>/task/task_user?iduser=${tasks.userid}">Tasks</a>
                     <br>
                    
 
